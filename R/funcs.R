@@ -9,11 +9,6 @@ get_pipeline <- function(suff) {
   target2_str <- paste0("target2_", suff)
   list(
     targets::tar_target_raw(target1_str, 1),
-    # targets::tar_target_raw(target2_name, quote(StringTargetRef::plus1(target1_suff)))
-    # targets::tar_target_raw(target2_name, quote(StringTargetRef::plus1(target1_name))) # object `target1_name` not found
-    # targets::tar_target_raw(target2_name, quote(StringTargetRef::plus1(eval(target1_name)))) # object `target1_name` not found
-    # targets::tar_target_raw(target2_name, quote(StringTargetRef::plus1(rlang::enquo(target1_name)))) # object `target1_name` not found
-    # targets::tar_target_raw(target2_name, quote(StringTargetRef::plus1({{target1_name}}))) # object `target1_name` not found
     targets::tar_target_raw(target2_str, substitute(StringTargetRef::plus1(x = target1_sym))) #
   )
 }
