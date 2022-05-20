@@ -1,4 +1,4 @@
 library(targets)
 
 
-StringTargetRef::get_pipeline(suff = "suff")
+StringTargetRef::get_pipeline(suff = "mysuff")
