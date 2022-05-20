@@ -22,10 +22,3 @@ get_pipeline <- function(suff) {
 plus1 <- function(x) {
   x + 1
 }
-
-# > tar_manifest()
-# # A tibble: 2 × 3
-# name         command                              pattern
-# <chr>        <chr>                                <chr>
-# 1 target1_suff 1                                    NA
-# 2 target2_suff StringTargetRef::plus1(target1_suff) NA
